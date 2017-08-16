@@ -1,7 +1,7 @@
 /**
  * Created On : 10 Aug 2017
  */
-package com.lk.meeting.room.resource;
+package com.lk.student.manager.resource;
 
 import java.io.Serializable;
 

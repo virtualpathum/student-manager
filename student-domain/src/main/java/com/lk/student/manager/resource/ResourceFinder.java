@@ -1,4 +1,4 @@
-package com.lk.meeting.room.resource;
+package com.lk.student.manager.resource;
 
 import java.io.Serializable;
 

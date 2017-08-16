@@ -1,7 +1,7 @@
 /**
  * Created On : 11 Aug 2017
  */
-package com.lk.meeting.room.web.resource.finder.impl;
+package com.lk.student.manager.web.resource.finder.impl;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.lk.meeting.room.entity.BookingEntity;
 import com.lk.meeting.room.mapper.BookingMapper;
 import com.lk.meeting.room.repo.BookingRepository;
-import com.lk.meeting.room.resource.BookingResource;
-import com.lk.meeting.room.web.resource.finder.BookingResourceFinder;
+import com.lk.student.manager.resource.BookingResource;
+import com.lk.student.manager.web.resource.finder.BookingResourceFinder;
 
 /**
  * The Class BookingResourceFinderImpl.

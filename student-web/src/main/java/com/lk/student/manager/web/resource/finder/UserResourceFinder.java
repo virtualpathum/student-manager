@@ -1,7 +1,7 @@
-package com.lk.meeting.room.web.resource.finder;
+package com.lk.student.manager.web.resource.finder;
 
 
-import com.lk.meeting.room.resource.UserResource;
+import com.lk.student.manager.resource.UserResource;
 
 /**
  * The Interface UserResourceFinder.

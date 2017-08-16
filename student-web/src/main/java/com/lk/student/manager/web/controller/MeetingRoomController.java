@@ -1,4 +1,4 @@
-package com.lk.meeting.room.web.controller;
+package com.lk.student.manager.web.controller;
 
 import java.util.Date;
 import java.util.List;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lk.meeting.room.resource.MeetingRoomResource;
 import com.lk.meeting.room.service.MeetingRoomService;
-import com.lk.meeting.room.web.resource.finder.MeetingRoomResourceFinder;
+import com.lk.student.manager.resource.MeetingRoomResource;
+import com.lk.student.manager.web.resource.finder.MeetingRoomResourceFinder;
 
 // TODO: Auto-generated Javadoc
 /**

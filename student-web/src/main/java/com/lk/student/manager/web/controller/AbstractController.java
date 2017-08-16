@@ -1,4 +1,4 @@
-package com.lk.meeting.room.web.controller;
+package com.lk.student.manager.web.controller;
 
 /**
  * The Class AbstractController.

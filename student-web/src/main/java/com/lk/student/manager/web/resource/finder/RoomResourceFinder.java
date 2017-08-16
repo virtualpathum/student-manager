@@ -1,9 +1,9 @@
-package com.lk.meeting.room.web.resource.finder;
+package com.lk.student.manager.web.resource.finder;
 
 
 
-import com.lk.meeting.room.resource.ResourceFinder;
-import com.lk.meeting.room.resource.RoomResource;
+import com.lk.student.manager.resource.ResourceFinder;
+import com.lk.student.manager.resource.RoomResource;
 
 
 public interface RoomResourceFinder extends ResourceFinder<RoomResource, Long> {

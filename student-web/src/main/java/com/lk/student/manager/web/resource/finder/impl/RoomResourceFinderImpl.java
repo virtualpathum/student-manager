@@ -1,11 +1,11 @@
-package com.lk.meeting.room.web.resource.finder.impl;
+package com.lk.student.manager.web.resource.finder.impl;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.lk.meeting.room.resource.RoomResource;
 import com.lk.meeting.room.service.RoomService;
-import com.lk.meeting.room.web.resource.finder.RoomResourceFinder;
+import com.lk.student.manager.resource.RoomResource;
+import com.lk.student.manager.web.resource.finder.RoomResourceFinder;
 
 
 @Named

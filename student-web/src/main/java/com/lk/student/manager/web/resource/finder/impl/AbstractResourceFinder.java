@@ -1,4 +1,4 @@
-package com.lk.meeting.room.web.resource.finder.impl;
+package com.lk.student.manager.web.resource.finder.impl;
 /**
  * Created On : 11 Aug 2017
  */
@@ -12,8 +12,8 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.lk.meeting.room.resource.AbstractResource;
-import com.lk.meeting.room.web.resource.finder.ResourceFinder;
+import com.lk.student.manager.resource.AbstractResource;
+import com.lk.student.manager.web.resource.finder.ResourceFinder;
 
 /**
  * @author virtualpathum

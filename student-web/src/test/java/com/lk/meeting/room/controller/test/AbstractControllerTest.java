@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.lk.meeting.room.config.RootConfig;
-import com.lk.meeting.room.web.config.WebMvcConfig;
+import com.lk.student.manager.web.config.WebMvcConfig;
 
 /**
  * The Class AbstractControllerTest.

@@ -1,11 +1,11 @@
-package com.lk.meeting.room.web.resource.finder;
+package com.lk.student.manager.web.resource.finder;
 
 import java.io.Serializable;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.lk.meeting.room.resource.AbstractResource;
+import com.lk.student.manager.resource.AbstractResource;
 
 // TODO: Auto-generated Javadoc
 /**

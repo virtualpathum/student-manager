@@ -1,7 +1,7 @@
 /**
  * Created On : 11 Aug 2017
  */
-package com.lk.meeting.room.web.controller;
+package com.lk.student.manager.web.controller;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lk.meeting.room.resource.BookingResource;
 import com.lk.meeting.room.service.BookingService;
-import com.lk.meeting.room.web.resource.finder.BookingResourceFinder;
+import com.lk.student.manager.resource.BookingResource;
+import com.lk.student.manager.web.resource.finder.BookingResourceFinder;
 
 // TODO: Auto-generated Javadoc
 /**

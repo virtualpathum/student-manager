@@ -1,4 +1,4 @@
-package com.lk.meeting.room.web.resource.finder.impl;
+package com.lk.student.manager.web.resource.finder.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,8 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.lk.meeting.room.entity.MeetingRoomEntity;
 import com.lk.meeting.room.mapper.MeetingRoomMapper;
 import com.lk.meeting.room.repo.MeetingRoomRepository;
-import com.lk.meeting.room.resource.MeetingRoomResource;
-import com.lk.meeting.room.web.resource.finder.MeetingRoomResourceFinder;
+import com.lk.student.manager.resource.MeetingRoomResource;
+import com.lk.student.manager.web.resource.finder.MeetingRoomResourceFinder;
 
 
 // TODO: Auto-generated Javadoc

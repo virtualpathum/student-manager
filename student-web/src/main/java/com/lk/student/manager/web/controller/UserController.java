@@ -1,4 +1,4 @@
-package com.lk.meeting.room.web.controller;
+package com.lk.student.manager.web.controller;
 
 import javax.inject.Inject;
 
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lk.meeting.room.resource.UserResource;
 import com.lk.meeting.room.service.UserService;
-import com.lk.meeting.room.web.resource.finder.UserResourceFinder;
+import com.lk.student.manager.resource.UserResource;
+import com.lk.student.manager.web.resource.finder.UserResourceFinder;
 
 // TODO: Auto-generated Javadoc
 /**

@@ -9,8 +9,8 @@ import javax.inject.Inject;
 
 import org.junit.Test;
 
-import com.lk.meeting.room.resource.MeetingRoomResource;
-import com.lk.meeting.room.web.controller.MeetingRoomController;
+import com.lk.student.manager.resource.MeetingRoomResource;
+import com.lk.student.manager.web.controller.MeetingRoomController;
 
 // TODO: Auto-generated Javadoc
 /**

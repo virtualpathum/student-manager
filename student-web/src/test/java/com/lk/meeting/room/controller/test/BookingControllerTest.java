@@ -12,12 +12,12 @@ import javax.inject.Inject;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
-import com.lk.meeting.room.resource.BookingResource;
-import com.lk.meeting.room.resource.MeetingRoomResource;
-import com.lk.meeting.room.resource.UserResource;
-import com.lk.meeting.room.web.controller.BookingController;
-import com.lk.meeting.room.web.controller.MeetingRoomController;
-import com.lk.meeting.room.web.controller.UserController;
+import com.lk.student.manager.resource.BookingResource;
+import com.lk.student.manager.resource.MeetingRoomResource;
+import com.lk.student.manager.resource.UserResource;
+import com.lk.student.manager.web.controller.BookingController;
+import com.lk.student.manager.web.controller.MeetingRoomController;
+import com.lk.student.manager.web.controller.UserController;
 
 /**
  * The Class BookingControllerTest.

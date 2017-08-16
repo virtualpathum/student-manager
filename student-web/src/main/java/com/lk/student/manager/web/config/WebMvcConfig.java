@@ -1,4 +1,4 @@
-package com.lk.meeting.room.web.config;
+package com.lk.student.manager.web.config;
 
 import java.util.List;
 

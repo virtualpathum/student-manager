@@ -1,4 +1,4 @@
-package com.lk.meeting.room.web.controller;
+package com.lk.student.manager.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lk.meeting.room.resource.RoomResource;
 import com.lk.meeting.room.service.RoomService;
-import com.lk.meeting.room.web.resource.finder.RoomResourceFinder;
+import com.lk.student.manager.resource.RoomResource;
+import com.lk.student.manager.web.resource.finder.RoomResourceFinder;
 
 @RestController
 @RequestMapping("/rooms")

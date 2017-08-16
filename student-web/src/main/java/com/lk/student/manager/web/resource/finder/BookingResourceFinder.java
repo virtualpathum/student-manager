@@ -1,11 +1,11 @@
 /**
  * Created On : 11 Aug 2017
  */
-package com.lk.meeting.room.web.resource.finder;
+package com.lk.student.manager.web.resource.finder;
 
 import java.util.List;
 
-import com.lk.meeting.room.resource.BookingResource;
+import com.lk.student.manager.resource.BookingResource;
 
 
 // TODO: Auto-generated Javadoc

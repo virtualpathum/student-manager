@@ -1,7 +1,7 @@
 /**
  * Created On : 10 Aug 2017
  */
-package com.lk.meeting.room.config;
+package com.lk.student.manager.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;

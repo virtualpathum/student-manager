@@ -1,3 +1,4 @@
+package com.lk.student.manager.repo;
 /*package com.lk.meeting.room.repo;
 
 import java.io.Serializable;

@@ -1,12 +1,10 @@
 /**
- * Created On : 10 Aug 2017
+ * Created On : 11 Aug 2017
  */
-package com.lk.meeting.room.mapper;
+package com.lk.student.manager.mapper;
 
-import com.lk.meeting.room.entity.MeetingRoomEntity;
-import com.lk.meeting.room.entity.UserEntity;
-import com.lk.meeting.room.resource.MeetingRoomResource;
-import com.lk.meeting.room.resource.UserResource;
+import com.lk.student.manager.entity.StudentEntity;
+import com.lk.student.manager.resource.BookingResource;
 
 import fr.xebia.extras.selma.Field;
 import fr.xebia.extras.selma.IgnoreMissing;
@@ -15,48 +13,48 @@ import fr.xebia.extras.selma.Mapper;
 import fr.xebia.extras.selma.Maps;
 
 /**
- * The Interface UserMapper.
+ * The Interface BookingMapper.
  * @author virtualpathum
  */
 @Mapper(withIoC = IoC.SPRING,
 withCustomFields = { @Field({"id", "resourceId"})})
-public interface UserMapper {
-
+public interface BookingMapper {
+	
 	/**
 	 * As resource.
 	 *
 	 * @param entity the entity
-	 * @return the user resource
+	 * @return the booking resource
 	 */
 	@Maps(withIgnoreMissing = IgnoreMissing.DESTINATION)
-	UserResource asResource(UserEntity entity);
-
+	BookingResource asResource(StudentEntity entity);
+	
 	/**
 	 * As entity.
 	 *
 	 * @param resource the resource
-	 * @return the user entity
+	 * @return the booking entity
 	 */
 	@Maps(withIgnoreMissing = IgnoreMissing.SOURCE)
-	UserEntity asEntity(UserResource resource);
-
+	StudentEntity asEntity(BookingResource resource);
+	
 	/**
 	 * Update resource.
 	 *
 	 * @param entity the entity
 	 * @param resource the resource
-	 * @return the user resource
+	 * @return the booking resource
 	 */
 	@Maps(withIgnoreMissing = IgnoreMissing.DESTINATION)
-	UserResource updateResource(UserEntity entity, UserResource resource);
+	BookingResource updateResource(StudentEntity entity, BookingResource resource);
 	
 	/**
 	 * Update entity.
 	 *
 	 * @param resource the resource
 	 * @param entity the entity
-	 * @return the user entity
+	 * @return the booking entity
 	 */
 	@Maps(withIgnoreMissing = IgnoreMissing.SOURCE)
-	UserEntity updateEntity(UserResource resource, UserEntity entity);
+	StudentEntity updateEntity(BookingResource resource, StudentEntity entity);
 }

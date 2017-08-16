@@ -6,11 +6,11 @@ package com.lk.meeting.room.service.impl;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.lk.meeting.room.entity.BookingEntity;
-import com.lk.meeting.room.mapper.BookingMapper;
-import com.lk.meeting.room.repo.BookingRepository;
-import com.lk.meeting.room.resource.BookingResource;
-import com.lk.meeting.room.service.BookingService;
+import com.lk.student.manager.entity.StudentEntity;
+import com.lk.student.manager.mapper.BookingMapper;
+import com.lk.student.manager.repo.BookingRepository;
+import com.lk.student.manager.resource.BookingResource;
+import com.lk.student.manager.service.BookingService;
 
 /**
  * @author virtualpathum
@@ -42,7 +42,7 @@ public class BookingServiceImpl implements BookingService {
 	
 	
 	private BookingResource createBooking(BookingResource resource) {
-		BookingEntity entity = mapper.asEntity(resource);
+		StudentEntity entity = mapper.asEntity(resource);
 		
 		return mapper.asResource(repo.saveAndFlush(entity));
 	}
@@ -60,7 +60,7 @@ public class BookingServiceImpl implements BookingService {
 	 */
 
 	private BookingResource updateBooking(BookingResource resource) {
-		BookingEntity entity = repo.findOne(resource.getResourceId());
+		StudentEntity entity = repo.findOne(resource.getResourceId());
 		//TODO: perform optimistic locking check
 		entity = mapper.updateEntity(resource, entity);
 

@@ -1,7 +1,7 @@
 /**
  * Created On : 10 Aug 2017
  */
-package com.lk.meeting.room.entity;
+package com.lk.student.manager.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +49,7 @@ public class MeetingRoomEntity extends AbstractEntity {
 	//One meeting room can have many bookings
 	@NotNull
 	@OneToMany(mappedBy="room", fetch = FetchType.LAZY)
-	List<BookingEntity> bookings = new ArrayList<BookingEntity>();
+	List<StudentEntity> bookings = new ArrayList<StudentEntity>();
 	
 	/**
 	 * Gets the id.
@@ -126,14 +126,14 @@ public class MeetingRoomEntity extends AbstractEntity {
 	/**
 	 * @return the bookings
 	 */
-	public List<BookingEntity> getBookings() {
+	public List<StudentEntity> getBookings() {
 		return bookings;
 	}
 
 	/**
 	 * @param bookings the bookings to set
 	 */
-	public void setBookings(List<BookingEntity> bookings) {
+	public void setBookings(List<StudentEntity> bookings) {
 		this.bookings = bookings;
 	}
 

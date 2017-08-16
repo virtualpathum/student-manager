@@ -1,9 +1,9 @@
 /**
  * Created On : 10 Aug 2017
  */
-package com.lk.meeting.room.service;
+package com.lk.student.manager.service;
 
-import com.lk.meeting.room.resource.UserResource;
+import com.lk.student.manager.resource.UserResource;
 /**
  * The Interface UserService.
  * @author virtualpathum

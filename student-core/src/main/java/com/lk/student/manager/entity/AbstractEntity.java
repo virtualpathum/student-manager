@@ -1,7 +1,7 @@
 /**
  * Created On : 10 Aug 2017
  */
-package com.lk.meeting.room.entity;
+package com.lk.student.manager.entity;
 
 import java.io.Serializable;
 

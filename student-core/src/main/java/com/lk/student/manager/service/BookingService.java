@@ -1,9 +1,9 @@
 /**
  * Created On : 11 Aug 2017
  */
-package com.lk.meeting.room.service;
+package com.lk.student.manager.service;
 
-import com.lk.meeting.room.resource.BookingResource;
+import com.lk.student.manager.resource.BookingResource;
 
 /**
  * @author virtualpathum

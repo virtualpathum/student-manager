@@ -6,11 +6,11 @@ package com.lk.meeting.room.service.impl;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.lk.meeting.room.entity.UserEntity;
-import com.lk.meeting.room.mapper.UserMapper;
-import com.lk.meeting.room.repo.UserRepository;
-import com.lk.meeting.room.resource.UserResource;
-import com.lk.meeting.room.service.UserService;
+import com.lk.student.manager.entity.UserEntity;
+import com.lk.student.manager.mapper.UserMapper;
+import com.lk.student.manager.repo.UserRepository;
+import com.lk.student.manager.resource.UserResource;
+import com.lk.student.manager.service.UserService;
 
 /**
  * The Class UserServiceImpl.

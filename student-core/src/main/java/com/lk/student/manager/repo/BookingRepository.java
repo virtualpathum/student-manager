@@ -1,23 +1,23 @@
 /**
  * Created On : 11 Aug 2017
  */
-package com.lk.meeting.room.repo;
+package com.lk.student.manager.repo;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.lk.meeting.room.entity.BookingEntity;
+import com.lk.student.manager.entity.StudentEntity;
 
 /**
  * @author virtualpathum
  *
  */
 // TODO : Remove below repository methods - extends QueryDslPredicateExecutor and implement predicates
-public interface BookingRepository extends JpaRepository<BookingEntity, Long> {
+public interface BookingRepository extends JpaRepository<StudentEntity, Long> {
 
-	List<BookingEntity> findByUserId(Long userId);
+	List<StudentEntity> findByUserId(Long userId);
 
-	List<BookingEntity> findByRoomId(Long roomId);
+	List<StudentEntity> findByRoomId(Long roomId);
 
 }

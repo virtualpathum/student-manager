@@ -9,11 +9,11 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.lk.meeting.room.entity.MeetingRoomEntity;
-import com.lk.meeting.room.mapper.MeetingRoomMapper;
-import com.lk.meeting.room.repo.RoomRepository;
-import com.lk.meeting.room.resource.MeetingRoomResource;
-import com.lk.meeting.room.service.RoomService;
+import com.lk.student.manager.entity.MeetingRoomEntity;
+import com.lk.student.manager.mapper.MeetingRoomMapper;
+import com.lk.student.manager.repo.RoomRepository;
+import com.lk.student.manager.resource.MeetingRoomResource;
+import com.lk.student.manager.service.RoomService;
 
 
 // TODO: Auto-generated Javadoc

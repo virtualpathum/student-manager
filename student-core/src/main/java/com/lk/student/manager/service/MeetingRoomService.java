@@ -1,12 +1,12 @@
 /**
  * Created On : 10 Aug 2017
  */
-package com.lk.meeting.room.service;
+package com.lk.student.manager.service;
 
 import java.util.Date;
 import java.util.List;
 
-import com.lk.meeting.room.resource.MeetingRoomResource;
+import com.lk.student.manager.resource.MeetingRoomResource;
 
 /**
  * The Interface RoomService.

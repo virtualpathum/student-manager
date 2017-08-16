@@ -1,7 +1,7 @@
 /**
  * Created On : 11 Aug 2017
  */
-package com.lk.meeting.room.entity;
+package com.lk.student.manager.entity;
 
 import java.util.Date;
 import java.util.Objects;

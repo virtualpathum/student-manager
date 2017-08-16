@@ -26,7 +26,7 @@ import javax.validation.constraints.Past;
  */
 @Entity
 @Table(name = "tbl_booking")
-public class BookingEntity extends AbstractEntity {
+public class StudentEntity extends AbstractEntity {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -5059693989959757523L;
@@ -149,8 +149,8 @@ public class BookingEntity extends AbstractEntity {
 			return false;
 		}
 
-		if (obj instanceof BookingEntity) {
-			BookingEntity other = (BookingEntity) obj;
+		if (obj instanceof StudentEntity) {
+			StudentEntity other = (StudentEntity) obj;
 			return Objects.equals(this.hashCode(), other.hashCode());
 		}
 		return false;

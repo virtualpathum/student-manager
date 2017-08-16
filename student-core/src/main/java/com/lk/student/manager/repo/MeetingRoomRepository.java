@@ -2,7 +2,7 @@
  * Created On : 11 Aug 2017
 /*
  * 
- */
+ *//*
 package com.lk.student.manager.repo;
 
 import java.util.Date;
@@ -14,10 +14,10 @@ import org.springframework.data.repository.query.Param;
 
 import com.lk.student.manager.entity.MeetingRoomEntity;
 
-/**
+*//**
  * The Interface MeetingRoomRepository.
  * @author virtualpathum
- */
+ *//*
 public interface MeetingRoomRepository extends JpaRepository<MeetingRoomEntity, Long> {
 	
 	@Query("SELECT m from MeetingRoomEntity m where m.id NOT IN"
@@ -25,3 +25,4 @@ public interface MeetingRoomRepository extends JpaRepository<MeetingRoomEntity, 
 			+" where a.id = c.room.id and c.bookingDateTime = :bookingDateTime)")
 	List<MeetingRoomEntity> getAvailableRooms(@Param("bookingDateTime") Date bookingDateTime);
 }
+*/

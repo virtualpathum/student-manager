@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.lk.meeting.room.core</groupId>
-	<artifactId>booking-core</artifactId>
+	<groupId>com.lk.student.manager.core</groupId>
+	<artifactId>student-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Meeting Room Core</name>
-	<description>Core module of the meeting room management application</description>
+	<name>Student Core</name>
+	<description>Core module of the student management application</description>
 	<properties>
 		<com.fasterxml.jackson.version>2.7.3</com.fasterxml.jackson.version>
 		<javax.persistence.version>1.0.2</javax.persistence.version>
@@ -24,8 +24,8 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>com.lk.meeting.room.domain</groupId>
-			<artifactId>booking-domain</artifactId>
+			<groupId>com.lk.student.manager.domain</groupId>
+			<artifactId>student-domain</artifactId>
 			<version>0.0.1-SNAPSHOT </version>
 		</dependency>
 
@@ -44,6 +44,14 @@
 			<artifactId>javax.inject</artifactId>
 			<version>${javax.inject.version}</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+<!-- <dependency>
+    <groupId>org.hibernate.validator</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>6.0.1.Final</version>
+</dependency> -->
+		
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -114,11 +122,6 @@
 			<version>${junit.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
-			<version>2.1</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>3.0.3.RELEASE</version>
@@ -178,11 +181,11 @@
 			<version>3.7.4</version>
 		</dependency>
 		
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.6.1</version>
-		</dependency>
+		</dependency> -->
 
 
 	</dependencies>

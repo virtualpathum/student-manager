@@ -1,134 +1,66 @@
-/**
- * Created On : 11 Aug 2017
- */
 package com.lk.student.manager.entity;
 
-import java.util.Date;
+//import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
-
-/**
- * @author virtualpathum
- * The Class BookingEntity.
- */
 @Entity
-@Table(name = "tbl_booking")
-public class StudentEntity extends AbstractEntity {
-
-	/** The Constant serialVersionUID. */
-	private static final long serialVersionUID = -5059693989959757523L;
-	
-	/** The id. */
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
-	
-	/** The user. */
-	//One user can have multiple bookings
-	@NotNull
-	@ManyToOne(optional = false, fetch = FetchType.LAZY)
-	@JoinColumn(name = "user_id", nullable = false)
-	UserEntity user;
-	
-	/** The room. */
-	//One room can have many bookings
-	@NotNull
-	@ManyToOne(optional = false, fetch = FetchType.LAZY)
-	@JoinColumn(name = "room_id", nullable = false)
-	MeetingRoomEntity room;
-	
-	/** The booking date time. */
-	@NotNull
-	@Past
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "booking_date_time", nullable = false)
-	Date bookingDateTime;
+@Table(name="tbl_student")
+public class StudentEntity implements Serializable{
 
 	/**
-	 * Gets the id.
-	 *
-	 * @return the id
+	 * 
 	 */
+	private static final long serialVersionUID = 9157969392013803110L;
+
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(name="student_name", nullable=false)
+	private String name;
+
+	@Column(name="student_age", nullable=false)
+	private Integer age;
+
+	@Column(name="student_grade", nullable=false)
+	private String grade;
+
 	public Long getId() {
 		return id;
 	}
 
-	/**
-	 * Sets the id.
-	 *
-	 * @param id the new id
-	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-	/**
-	 * Gets the room.
-	 *
-	 * @return the room
-	 */
-	public MeetingRoomEntity getRoom() {
-		return room;
+	public String getName() {
+		return name;
 	}
 
-	/**
-	 * Gets the booking date time.
-	 *
-	 * @return the booking date time
-	 */
-	public Date getBookingDateTime() {
-		return bookingDateTime;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	/**
-	 * Sets the booking date time.
-	 *
-	 * @param bookingDateTime the new booking date time
-	 */
-	public void setBookingDateTime(Date bookingDateTime) {
-		this.bookingDateTime = bookingDateTime;
-	}
-	
-	/**
-	 * Gets the user.
-	 *
-	 * @return the user
-	 */
-	public UserEntity getUser() {
-		return user;
+	public Integer getAge() {
+		return age;
 	}
 
-	/**
-	 * Sets the user.
-	 *
-	 * @param user the new user
-	 */
-	public void setUser(UserEntity user) {
-		this.user = user;
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
-	/**
-	 * Sets the room.
-	 *
-	 * @param room the new room
-	 */
-	public void setRoom(MeetingRoomEntity room) {
-		this.room = room;
+
+	public String getGrade() {
+		return grade;
 	}
-	
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
@@ -160,9 +92,11 @@ public class StudentEntity extends AbstractEntity {
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		return sb.append("id = " + this.getId())
-				.append(" , user = " + this.getUser().getId())
-				.append(" , room = " + this.getRoom().getId()).toString();
+				.append(" , name = " + this.getName())
+				.append(" , age = " + this.getAge())
+				.append(" , grade = " + this.getGrade()).toString();
 				
 	}
+
 
 }

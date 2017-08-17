@@ -12,6 +12,7 @@ import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -22,6 +23,8 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+
+
 /**
  * @author virtualpathum
  * The Class SysConfig.
@@ -29,50 +32,37 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 //TODO:Need to fix
 //@Import({ DatabaseProfile.class})
-@EnableJpaRepositories(basePackages = {"com.lk.meeting.room.repo" })
+@EnableJpaRepositories(basePackages = {"com.lk.student.manager.repo" })
 @EnableTransactionManagement
 public class SysConfig {
 	
 	/** The Constant PERSISTENCE_UNIT_NAME. */
-	public static final String PERSISTENCE_UNIT_NAME = "PU_MEETING_ROOM";
+	public static final String PERSISTENCE_UNIT_NAME = "PU_STUDENT";
 	
 	/** The Constant JPA_ENTITY_PACKAGES. */
-	private static final String[] JPA_ENTITY_PACKAGES = { "com.lk.meeting.room.entity" };
+	private static final String[] JPA_ENTITY_PACKAGES = { "com.lk.student.manager.entity" };
 	
 	/** The Constant PERSISTENCE_PROPERTIES. */
 	public static final String PERSISTENCE_PROPERTIES = "persistence.properties";
 	
 	/** The Constant jndiNamespace. */
-	public static final String jndiNamespace = "java:comp/env/jdbc/meeting-room";
+	public static final String jndiNamespace = "java:comp/env/jdbc/student-manager";
+
 	
-	
-	/**
-	 *  The data source.
-	 *
-	 * @return the data source
-	 */
-	// TODO : create datasource in context.xml and give lookup name using jndi
-	// and inject the datasource here
+
 	@Bean
+	@Primary
 	public DataSource dataSource() {
 	    DriverManagerDataSource dataSource = new DriverManagerDataSource();
 	    dataSource.setDriverClassName("org.postgresql.Driver");
 
-	    dataSource.setUrl("jdbc:postgresql://localhost:5432/meeting-room");
+	    dataSource.setUrl("jdbc:postgresql://localhost:5432/student-manager");
 	    dataSource.setUsername("postgres");
 	    dataSource.setPassword("abc123");
 
 	    return dataSource;
 	}
 	
-	
-	/**
-	 * Gets the entity manager factory.
-	 *
-	 * @return the entity manager factory
-	 * @throws IOException Signals that an I/O exception has occurred.
-	 * @throws NamingException the naming exception
-	 */
 	@Bean
 	public EntityManagerFactory entityManagerFactory() throws IOException, NamingException{
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
@@ -88,25 +78,13 @@ public class SysConfig {
 
 	}
 	
-	/**
-	 * Gets the jpa properties.
-	 *
-	 * @return the jpa properties
-	 * @throws IOException Signals that an I/O exception has occurred.
-	 */
+	
 	@Bean
 	public Properties getJpaProperties() throws IOException {
 		ClassPathResource resource = new ClassPathResource(PERSISTENCE_PROPERTIES);
 		return PropertiesLoaderUtils.loadProperties(resource);
 	}
 	
-	/**
-	 * transactionManager.
-	 *
-	 * @return the platform transaction manager
-	 * @throws IOException Signals that an I/O exception has occurred.
-	 * @throws NamingException the naming exception
-	 */
 	@Bean
     public PlatformTransactionManager transactionManager() throws IOException, NamingException {
         JpaTransactionManager jpaTransactionManager  = new JpaTransactionManager();
@@ -115,4 +93,5 @@ public class SysConfig {
         
         return jpaTransactionManager;
     }
+	
 }

@@ -22,8 +22,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Configuration
 @Import({ SysConfig.class})
 @ComponentScan(basePackages = { 
-	    "com.lk.meeting.room.mapper",
-	    "com.lk.meeting.room.service" })
+	    "com.lk.student.manager.mapper",
+	    "com.lk.student.manager.service" })
 public class RootConfig {
 	
 	/**

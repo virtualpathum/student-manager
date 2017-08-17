@@ -1,29 +1,11 @@
-/**
- * Created On : 11 Aug 2017
- */
 package com.lk.student.manager.service;
 
-import com.lk.student.manager.resource.BookingResource;
+import com.lk.student.manager.resource.StudentResource;
 
-/**
- * @author virtualpathum
- *
- */
-public interface BookingService {
+
+public interface StudentService {
 	
-	/**
-	 * Save or update.
-	 *
-	 * @param booking the booking
-	 * @return the booking resource
-	 */
-	BookingResource saveOrUpdate(BookingResource booking);
-	
-	/**
-	 * Cancel booking.
-	 *
-	 * @param bookingId the booking id
-	 */
-	void cancelBooking(Long bookingId);
-	
+	void delete(Long id);
+
+	StudentResource saveOrUpdate (StudentResource resource);
 }

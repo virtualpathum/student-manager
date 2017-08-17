@@ -1,70 +1,54 @@
-/**
- * Created On : 11 Aug 2017
- */
-package com.lk.meeting.room.service.impl;
+package com.lk.student.manager.service.impl;
+
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.springframework.transaction.annotation.Transactional;
+
+import com.lk.student.manager.mapper.StudentMapper;
 import com.lk.student.manager.entity.StudentEntity;
-import com.lk.student.manager.mapper.BookingMapper;
-import com.lk.student.manager.repo.BookingRepository;
-import com.lk.student.manager.resource.BookingResource;
-import com.lk.student.manager.service.BookingService;
+import com.lk.student.manager.repo.StudentRepository;
+import com.lk.student.manager.resource.StudentResource;
+import com.lk.student.manager.service.StudentService;
 
-/**
- * @author virtualpathum
- *
- */
-@Named("bookService")
-public class BookingServiceImpl implements BookingService {
+@Named("studentService")
+@Transactional
+public class StudentServiceImpl implements StudentService {
 
 	@Inject
-	BookingRepository repo;
-	
+	private StudentRepository repo;
+
 	@Inject
-	BookingMapper mapper;
-	/* (non-Javadoc)
-	 * @see com.lk.meeting.room.service.BookingService#bookMeetingRoom(com.lk.meeting.room.resource.UserResource, com.lk.meeting.room.resource.MeetingRoomResource)
-	 */
-	
-	/* (non-Javadoc)
-	 * @see com.lk.meeting.room.service.BookingService#saveOrUpdate(com.lk.meeting.room.resource.BookingResource)
-	 */
+	private StudentMapper mapper;
+
 	@Override
-	public BookingResource saveOrUpdate(BookingResource resource) {
-		if(null == resource.getResourceId()){
-			return createBooking(resource);
-		}else{
-			return updateBooking(resource);
+	public StudentResource saveOrUpdate(StudentResource resource) {
+		if (null == resource.getId()) {
+			return createStudent(resource);
+		} else {
+			return updateStudent(resource);
 		}
 	}
-	
-	
-	private BookingResource createBooking(BookingResource resource) {
-		StudentEntity entity = mapper.asEntity(resource);
-		
-		return mapper.asResource(repo.saveAndFlush(entity));
-	}
 
-	/* (non-Javadoc)
-	 * @see com.lk.meeting.room.service.BookingService#cancelBooking(java.lang.Long)
-	 */
 	@Override
-	public void cancelBooking(Long id) {// TODO Auto-generated method stub
+	public void delete(Long id) {
 		repo.delete(id);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.lk.meeting.room.service.BookingService#updateBooking(com.lk.meeting.room.resource.BookingResource)
-	 */
+	private StudentResource createStudent(StudentResource resource) {
+		StudentEntity entity = mapper.asEntity(resource);
 
-	private BookingResource updateBooking(BookingResource resource) {
-		StudentEntity entity = repo.findOne(resource.getResourceId());
-		//TODO: perform optimistic locking check
+		return mapper.asResource(repo.saveAndFlush(entity));
+	}
+
+	private StudentResource updateStudent(StudentResource resource) {
+		StudentEntity entity = repo.findOne(resource.getId());
+		// TODO: perform optimistic locking check
 		entity = mapper.updateEntity(resource, entity);
 
-		entity= repo.saveAndFlush(entity);
+		entity = repo.saveAndFlush(entity);
 		return mapper.updateResource(entity, resource);
 	}
 

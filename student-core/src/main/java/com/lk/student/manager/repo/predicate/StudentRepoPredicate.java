@@ -8,6 +8,6 @@ package com.lk.student.manager.repo.predicate;
  *
  */
 //TODO : add implementation for QueryDSL predicates
-public class BookingRepoPredicate{
+public class StudentRepoPredicate{
 
 }

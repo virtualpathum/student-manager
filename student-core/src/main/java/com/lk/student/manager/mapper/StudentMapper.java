@@ -3,58 +3,63 @@
  */
 package com.lk.student.manager.mapper;
 
-import com.lk.student.manager.entity.StudentEntity;
-import com.lk.student.manager.resource.BookingResource;
 
-import fr.xebia.extras.selma.Field;
+import com.lk.student.manager.entity.StudentEntity;
+import com.lk.student.manager.resource.StudentResource;
+
 import fr.xebia.extras.selma.IgnoreMissing;
 import fr.xebia.extras.selma.IoC;
 import fr.xebia.extras.selma.Mapper;
 import fr.xebia.extras.selma.Maps;
 
+// TODO: Auto-generated Javadoc
 /**
- * The Interface BookingMapper.
+ * The Interface StudentMapper.
+ *
  * @author virtualpathum
  */
-@Mapper(withIoC = IoC.SPRING,
-withCustomFields = { @Field({"id", "resourceId"})})
-public interface BookingMapper {
+@Mapper(withIoC = IoC.SPRING)
+public interface StudentMapper {
 	
+
 	/**
 	 * As resource.
 	 *
 	 * @param entity the entity
-	 * @return the booking resource
+	 * @return the student resource
 	 */
 	@Maps(withIgnoreMissing = IgnoreMissing.DESTINATION)
-	BookingResource asResource(StudentEntity entity);
+	StudentResource asResource(StudentEntity entity);
 	
+
 	/**
 	 * As entity.
 	 *
 	 * @param resource the resource
-	 * @return the booking entity
+	 * @return the student entity
 	 */
 	@Maps(withIgnoreMissing = IgnoreMissing.SOURCE)
-	StudentEntity asEntity(BookingResource resource);
+	StudentEntity asEntity(StudentResource resource);
 	
+
 	/**
 	 * Update resource.
 	 *
 	 * @param entity the entity
 	 * @param resource the resource
-	 * @return the booking resource
+	 * @return the student resource
 	 */
 	@Maps(withIgnoreMissing = IgnoreMissing.DESTINATION)
-	BookingResource updateResource(StudentEntity entity, BookingResource resource);
+	StudentResource updateResource(StudentEntity entity, StudentResource resource);
 	
+
 	/**
 	 * Update entity.
 	 *
 	 * @param resource the resource
 	 * @param entity the entity
-	 * @return the booking entity
+	 * @return the student entity
 	 */
 	@Maps(withIgnoreMissing = IgnoreMissing.SOURCE)
-	StudentEntity updateEntity(BookingResource resource, StudentEntity entity);
+	StudentEntity updateEntity(StudentResource resource, StudentEntity entity);
 }

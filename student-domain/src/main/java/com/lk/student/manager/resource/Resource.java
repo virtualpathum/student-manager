@@ -13,13 +13,13 @@ public interface Resource<T> {
 	 *
 	 * @return the resource id
 	 */
-	T getResourceId();
+	T getId();
 	
 	/**
 	 * Sets the resource id.
 	 *
 	 * @param id the new resource id
 	 */
-	void setResourceId(T id);
+	void setId(T id);
 	
 }

@@ -14,28 +14,28 @@ import java.io.Serializable;
 public abstract class AbstractResource<T extends Serializable> implements Resource<T> {
 	
 	/** The resource id. */
-	protected T resourceId;
+	protected T id;
 	
 	/**
 	 * Instantiates a new abstract resource.
 	 *
 	 * @param resourceId the resource id
 	 */
-	public AbstractResource(T resourceId){
-		this.resourceId = resourceId;
+	public AbstractResource(T id){
+		this.id = id;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.lk.meeting.room.resource.Resource#getResourceId()
 	 */
-	public T getResourceId() {
-		return resourceId;
+	public T getId() {
+		return id;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.lk.meeting.room.resource.Resource#setResourceId(java.lang.Object)
 	 */
-	public void setResourceId(T resourceId) {
-		this.resourceId = resourceId;
+	public void setId(T id) {
+		this.id = id;
 	}
 }

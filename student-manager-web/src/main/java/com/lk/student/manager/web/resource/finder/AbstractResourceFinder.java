@@ -1,7 +1,8 @@
-package com.lk.student.manager.web.resource.finder;
 /**
  * Created On : 11 Aug 2017
  */
+package com.lk.student.manager.web.resource.finder;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,9 +16,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.lk.student.manager.resource.AbstractResource;
 import com.lk.student.manager.web.resource.finder.ResourceFinder;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author virtualpathum
+ * The Class AbstractResourceFinder.
  *
+ * @author virtualpathum
+ * @param <R> the generic type
+ * @param <E> the element type
+ * @param <S> the generic type
+ * @param <ID> the generic type
  */
 // Not compulsory for resource finder to extends this class
 public abstract class AbstractResourceFinder<R extends AbstractResource<ID>, E,

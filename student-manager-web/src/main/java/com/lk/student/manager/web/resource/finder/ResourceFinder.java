@@ -1,3 +1,6 @@
+/**
+ * Created On : 11 Aug 2017
+ */
 package com.lk.student.manager.web.resource.finder;
 
 import java.io.Serializable;
@@ -10,7 +13,7 @@ import com.lk.student.manager.resource.AbstractResource;
 // TODO: Auto-generated Javadoc
 /**
  * The Interface ResourceFinder.
- *
+ * @author virtualpathum
  * @param <R> the generic type
  * @param <ID> the generic type
  */

@@ -30,7 +30,7 @@
 	                    <div class="form-group col-md-12">
 	                        <label class="col-md-2 control-lable" for="salary">Student Grade</label>
 	                        <div class="col-md-7">
-	                            <input type="text" ng-model="ctrl.student.grade" id="grade" class="form-control input-sm" placeholder="Enter Student Grade." required ng-pattern="ctrl.onlyNumbers"/>
+	                            <input type="text" ng-model="ctrl.student.grade" id="grade" class="form-control input-sm" placeholder="Enter Student Grade." required ng-minlength="1"/>
 	                        </div>
 	                    </div>
 	                </div>

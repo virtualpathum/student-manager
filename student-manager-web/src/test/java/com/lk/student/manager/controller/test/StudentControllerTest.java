@@ -1,10 +1,11 @@
 /**
- * Created On : 11 Aug 2017
+ * Created On : 18 Aug 2017
  */
 package com.lk.student.manager.controller.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ import com.lk.student.manager.controller.StudentController;
 import com.lk.student.manager.resource.StudentResource;
 
 /**
- * The Class BookingControllerTest.
+ * The Class StudentControllerTest.
  *
  * @author virtualpathum
  */
@@ -58,6 +59,40 @@ public class StudentControllerTest extends AbstractControllerTest {
 		assertNotNull(list);
 		assertEquals(1, list.size());
 		LOG.info("student list : " + list.size());
+
+	}
+	
+	@Test
+	public void testGetStudentMethod() {
+		
+		StudentResource student = controller.getStudent(1);
+		assertNotNull(student);
+
+	}
+	
+	@Test
+	public void testUpdateStudentMethod() {
+		
+		StudentResource student = controller.getStudent(1);
+		student.setName("Name Updated");
+		
+		StudentResource updatedStudent = controller.updateStudent(1, student);
+		assertNotNull(updatedStudent);
+		assertEquals("Name Updated", updatedStudent.getName());
+
+	}
+	
+	//@Test
+	public void testDeleteStudentMethod() {
+		
+		StudentResource beforeDelete = controller.getStudent(1);
+		assertNotNull(beforeDelete);
+		
+		controller.deleteStudent(1);
+		
+		StudentResource aftterDelete = controller.getStudent(1);
+		assertNull(aftterDelete);
+
 
 	}
 

@@ -62,3 +62,5 @@ StudentControllerTest
 
 ```
 
+## Special Note
+Entire system architecture has developed in a way which provide loose coupling, expandability,  easy maintenance and several other features. I have added the AngularJS Front End code and added Spring Boot support for the student-manager-web module to demonstrate the system functionality with the actual UI. 

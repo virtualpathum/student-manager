@@ -1,5 +1,5 @@
 /**
- * Created On : 10 Aug 2017
+ * Created On : 16 Aug 2017
  */
 package com.lk.student.manager.resource;
 
@@ -25,15 +25,17 @@ public abstract class AbstractResource<T extends Serializable> implements Resour
 		this.id = id;
 	}
 
+	
 	/* (non-Javadoc)
-	 * @see com.lk.meeting.room.resource.Resource#getResourceId()
+	 * @see com.lk.student.manager.resource.Resource#getId()
 	 */
 	public T getId() {
 		return id;
 	}
 
+	
 	/* (non-Javadoc)
-	 * @see com.lk.meeting.room.resource.Resource#setResourceId(java.lang.Object)
+	 * @see com.lk.student.manager.resource.Resource#setId(java.lang.Object)
 	 */
 	public void setId(T id) {
 		this.id = id;

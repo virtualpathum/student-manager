@@ -40,8 +40,6 @@ public class StudentResource extends AbstractResource<Long> {
 	private String grade;
 	
 	
-	
-
 	/**
 	 * Gets the name.
 	 *

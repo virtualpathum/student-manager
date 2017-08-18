@@ -19,8 +19,9 @@ Three modules are availabe
 Open Eclipse or STS and right click on each project and select configure
 Select convert to maven project
 You can see the converted maven projects in the Project explorer section
-Install the PostgreSQL if you don't have install it already and create a database as meeting-room
-Please update the database credentials in the SysConfig file before build the booking-core project
+Install the PostgreSQL if you don't have install it already 
+Create a database as student-manager
+Please update the database credentials in the SysConfig file before build the student-core project
 ```
 ### Build Order
 ```
@@ -63,4 +64,4 @@ StudentControllerTest
 ```
 
 ## Special Note
-Entire system architecture has developed in a way which provide loose coupling, expandability,  easy maintenance and several other features. I have added the AngularJS Front End code and added Spring Boot support for the student-manager-web module to demonstrate the system functionality with the actual UI. 
+Entire system architecture has developed in a way which provide loose coupling, scalability,  easy maintenance and several other features. I have added the AngularJS Front End code and added Spring Boot support for the student-manager-web module to demonstrate the system functionality with the actual UI. 

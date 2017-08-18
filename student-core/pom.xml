@@ -6,8 +6,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Student Core</name>
 	<description>Core module of the student management application</description>
+	
 	<properties>
-		<com.fasterxml.jackson.version>2.7.3</com.fasterxml.jackson.version>
+		<java.version>1.8</java.version>
 		<javax.persistence.version>1.0.2</javax.persistence.version>
 		<javax.inject.version>1</javax.inject.version>
 		<org.springframework.version>4.3.10.RELEASE</org.springframework.version>
@@ -15,9 +16,14 @@
 		<org.springframework.data.version>1.11.2.RELEASE</org.springframework.data.version>
 		<org.springframework.test.version>4.0.5.RELEASE</org.springframework.test.version>
 		<org.springframework.web.version>4.3.10.RELEASE</org.springframework.web.version>
+		<org.springframework.jdbc.version>3.0.3.RELEASE</org.springframework.jdbc.version>
+		<postgresql.version>9.1-901.jdbc4</postgresql.version>
+		<com.fasterxml.jackson.version>2.7.3</com.fasterxml.jackson.version>
 		<com.fasterxml.jackson.core.version>2.8.9</com.fasterxml.jackson.core.version>
 		<fr.xebia.extras.selma.version>1.0</fr.xebia.extras.selma.version>
+		<fr.xebia.extras.selma-processor.version>1.0</fr.xebia.extras.selma-processor.version>
 		<junit.version>4.12</junit.version>
+
 
 	</properties>
 
@@ -36,21 +42,12 @@
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- <dependency> <groupId>javax.persistence</groupId> <artifactId>persistence-api</artifactId> 
-			<version>${javax.persistence.version}</version> </dependency> -->
 
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 			<version>${javax.inject.version}</version>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
-<!-- <dependency>
-    <groupId>org.hibernate.validator</groupId>
-    <artifactId>hibernate-validator</artifactId>
-    <version>6.0.1.Final</version>
-</dependency> -->
 		
 
 		<dependency>
@@ -65,7 +62,7 @@
 			<version>${org.springframework.data.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
@@ -106,11 +103,10 @@
 			<version>${fr.xebia.extras.selma.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/fr.xebia.extras/selma-processor -->
 		<dependency>
 			<groupId>fr.xebia.extras</groupId>
 			<artifactId>selma-processor</artifactId>
-			<version>1.0</version>
+			<version>${fr.xebia.extras.selma-processor.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -121,11 +117,6 @@
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>3.0.3.RELEASE</version>
-		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 		<dependency>
@@ -133,25 +124,19 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>5.2.10.Final</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
-		<!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
+		
 		<dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.1-901.jdbc4</version>
+			<version>${postgresql.version}</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.0-api</artifactId>
 			<version>1.0.1.Final</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
-		<dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.4</version>
-		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/javax.persistence -->
 		<dependency>

@@ -1,5 +1,5 @@
 /**
- * Created On : 11 Aug 2017
+ * Created On : 16 Aug 2017
  */
 package com.lk.student.manager.web.resource.finder;
 
@@ -47,13 +47,16 @@ public abstract class AbstractResourceFinder<R extends AbstractResource<ID>, E,
 	}
 
 	/** {@inheritDoc} */
-
 	public R findOne(ID id) {
 		E entity = repo.findOne(id);
 		return toResource(entity);
 	}
 
-	
+	/** {@inheritDoc} */
+	public List<R> findAll() {
+		List<E> list = repo.findAll();
+		return toResources(list);
+	}
 
 	/** {@inheritDoc} */
 	public Page<R> findAll(Pageable pageable) {
@@ -68,8 +71,7 @@ public abstract class AbstractResourceFinder<R extends AbstractResource<ID>, E,
 	 * @param pageable the pageable
 	 * @return the page
 	 */
-	protected Page<R> toResources(
-			Page<E> entities, Pageable pageable) {
+	protected Page<R> toResources(Page<E> entities, Pageable pageable) {
 
 		List<R> resources = toResources(entities.getContent());
 		return new PageImpl<R>(resources, pageable, entities.getTotalElements());

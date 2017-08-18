@@ -22,7 +22,7 @@ import com.lk.student.manager.resource.StudentResource;
  *
  * @author virtualpathum
  */
-//TODO:These test cases have develop to test the system configuration and flow of the system
+//TODO:These test cases had develop to test the system configuration and flow of the system
 // Need to use Jmokit to mock the services
 public class StudentControllerTest extends AbstractControllerTest {
 	
@@ -32,10 +32,9 @@ public class StudentControllerTest extends AbstractControllerTest {
 	@Inject
 	StudentController controller;
 	
-
-
+	
 	/**
-	 * Test.
+	 * Test create student method.
 	 */
 	@Test
 	public void testCreateStudentMethod() {
@@ -52,8 +51,11 @@ public class StudentControllerTest extends AbstractControllerTest {
 
 	}
 	
+	/**
+	 * Test list all students method.
+	 */
 	@Test
-	public void testlistAllStudentsMethod() {
+	public void testListAllStudentsMethod() {
 		
 		List<StudentResource> list = controller.listAllStudents();
 		assertNotNull(list);
@@ -62,6 +64,9 @@ public class StudentControllerTest extends AbstractControllerTest {
 
 	}
 	
+	/**
+	 * Test get student method.
+	 */
 	@Test
 	public void testGetStudentMethod() {
 		
@@ -70,6 +75,9 @@ public class StudentControllerTest extends AbstractControllerTest {
 
 	}
 	
+	/**
+	 * Test update student method.
+	 */
 	@Test
 	public void testUpdateStudentMethod() {
 		
@@ -82,6 +90,9 @@ public class StudentControllerTest extends AbstractControllerTest {
 
 	}
 	
+	/**
+	 * Test delete student method.
+	 */
 	//@Test
 	public void testDeleteStudentMethod() {
 		

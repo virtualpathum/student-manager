@@ -1,9 +1,10 @@
 /**
- * Created On : 11 Aug 2017
+ * Created On : 16 Aug 2017
  */
 package com.lk.student.manager.web.resource.finder;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -30,11 +31,17 @@ public interface ResourceFinder <R extends AbstractResource<? extends Serializab
 	/**
 	 * Find all.
 	 *
+	 * @return the list
+	 */
+	List<R> findAll();
+	
+	/**
+	 * Find all.
+	 *
 	 * @param pageable the pageable
 	 * @return the page
 	 */
 	Page<R> findAll(Pageable pageable);
 
-	
 	
 }

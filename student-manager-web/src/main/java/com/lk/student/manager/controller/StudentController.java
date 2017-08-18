@@ -9,6 +9,7 @@ import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -60,20 +61,20 @@ public class StudentController {
 	@RequestMapping(value = "/student/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
 	public List<StudentResource> listAllStudents() {
-		return resourceFinder.findAllStudents();
+		return resourceFinder.findAll();
 	}
 
 	/**
 	 * Gets the student.
 	 *
 	 * @param id the id
-	 * @return the student
+	 * @return the student resource
 	 */
 	@RequestMapping(value = "/student/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
 	public StudentResource getStudent(@PathVariable("id") long id) {
 		logger.info("Fetching Student with id {}", id);
-		return resourceFinder.findById(id);
+		return resourceFinder.findOne(id);
 
 	}
 
@@ -81,7 +82,6 @@ public class StudentController {
 	 * Creates the student.
 	 *
 	 * @param resource the resource
-	 * @param ucBuilder the uc builder
 	 * @return the student resource
 	 */
 	@RequestMapping(value = "/student/", method = RequestMethod.POST)
@@ -115,7 +115,6 @@ public class StudentController {
 	public void deleteStudent(@PathVariable("id") long id) {
 		logger.info("Fetching & Deleting Student with id {}", id);
 		service.delete(id);
-
 	}
 
 

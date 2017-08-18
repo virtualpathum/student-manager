@@ -3,8 +3,6 @@
  */
 package com.lk.student.manager.web.resource.finder.impl;
 
-import java.util.List;
-
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -15,11 +13,9 @@ import com.lk.student.manager.resource.StudentResource;
 import com.lk.student.manager.web.resource.finder.AbstractResourceFinder;
 import com.lk.student.manager.web.resource.finder.StudentResourceFinder;
 
-
-
 // TODO: Auto-generated Javadoc
 /**
- * The Class BookingResourceFinderImpl.
+ * The Class StudentResourceFinderImpl.
  * @author virtualpathum
  */
 @Named("studentResourceFinder")
@@ -44,29 +40,7 @@ public class StudentResourceFinderImpl extends AbstractResourceFinder<StudentRes
 	 */
 	@Override
 	protected StudentResource toResource(StudentEntity entity) {
-		
 		return mapper.asResource(entity);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.lk.student.manager.web.resource.finder.StudentResourceFinder#findById(java.lang.Long)
-	 */
-	@Override
-	public StudentResource findById(Long id) {
-
-		StudentEntity entity = repo.findOne(id);
-		return mapper.asResource(entity);
-		
-	}
-
-	/* (non-Javadoc)
-	 * @see com.lk.student.manager.web.resource.finder.StudentResourceFinder#findAllStudents()
-	 */
-	@Override
-	public List<StudentResource> findAllStudents() {
-		List<StudentEntity> list = repo.findAll();
-		return toResources(list);
-
-	}
-	
 }

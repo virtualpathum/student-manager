@@ -1,5 +1,5 @@
 /**
- * Created On : 10 Aug 2017
+ * Created On : 16 Aug 2017
  */
 package com.lk.student.manager.config;
 
@@ -22,8 +22,6 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-
 
 /**
  * @author virtualpathum

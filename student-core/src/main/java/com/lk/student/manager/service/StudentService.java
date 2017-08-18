@@ -14,17 +14,17 @@ import com.lk.student.manager.resource.StudentResource;
 public interface StudentService {
 	
 	/**
-	 * Delete.
-	 *
-	 * @param id the id
-	 */
-	void delete(Long id);
-
-	/**
 	 * Save or update.
 	 *
 	 * @param resource the resource
 	 * @return the student resource
 	 */
 	StudentResource saveOrUpdate (StudentResource resource);
+	
+	/**
+	 * Delete.
+	 *
+	 * @param id the id
+	 */
+	void delete(Long id);
 }

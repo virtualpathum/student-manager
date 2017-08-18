@@ -22,7 +22,6 @@ import com.lk.student.manager.service.StudentService;
  * The Class StudentServiceImpl.
  */
 @Named("studentService")
-@Transactional
 public class StudentServiceImpl implements StudentService {
 
 	/** The repo. */
@@ -37,6 +36,7 @@ public class StudentServiceImpl implements StudentService {
 	 * @see com.lk.student.manager.service.StudentService#saveOrUpdate(com.lk.student.manager.resource.StudentResource)
 	 */
 	@Override
+	@Transactional(rollbackFor = Exception.class)
 	public StudentResource saveOrUpdate(StudentResource resource) {
 		if (null == resource.getId()) {
 			return createStudent(resource);

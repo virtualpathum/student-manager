@@ -9,7 +9,7 @@ import com.lk.student.manager.entity.StudentEntity;
  * The Interface StudentRepository.
  */
 //TODO : Remove below repository methods - extends QueryDslPredicateExecutor and implement predicates
-public interface StudentRepository extends AbstractRepository<StudentEntity, Long> {
+public interface StudentRepository extends JpaRepository<StudentEntity, Long> {
 
     /**
      * Find by name.

@@ -1,5 +1,5 @@
 /**
- * Created On : 10 Aug 2017
+ * Created On : 16 Aug 2017
  */
 package com.lk.student.manager.entity;
 
@@ -9,6 +9,8 @@ import java.io.Serializable;
  * @author virtualpathum
  * The Class AbstractEntity.
  */
+// TODO : If needed can use @version of optimistic checking
+// and @CreatedBy, @CreatedDate etc ... for auditing purpose
 public abstract class AbstractEntity implements Serializable{
 
 	/** The Constant serialVersionUID. */

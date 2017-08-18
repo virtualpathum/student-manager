@@ -11,8 +11,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 // TODO: Auto-generated Javadoc
+// TODO : use lombok for generate getters and setters
 /**
  * @author virtualpathum
  * The Class StudentEntity.
@@ -30,14 +33,17 @@ public class StudentEntity extends AbstractEntity{
 	private Long id;
 
 	/** The name. */
+	@NotEmpty
 	@Column(name="student_name", nullable=false)
 	private String name;
 
 	/** The age. */
+	@NotNull
 	@Column(name="student_age", nullable=false)
 	private Integer age;
 
 	/** The grade. */
+	@NotNull
 	@Column(name="student_grade", nullable=false)
 	private String grade;
 

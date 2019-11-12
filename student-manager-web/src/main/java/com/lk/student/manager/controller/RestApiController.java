@@ -1,3 +1,4 @@
+/*
 package com.lk.student.manager.controller;
 
 import java.util.List;
@@ -72,10 +73,12 @@ public class RestApiController {
 
 	}
 
+*/
 /*	@RequestMapping(value = "/student/", method = RequestMethod.DELETE)
 	public void deleteAllUsers() {
 		logger.info("Deleting All Students");
 		service.deleteAllStudents();
-	}*/
+	}*//*
 
-}
+
+}*/

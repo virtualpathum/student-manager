@@ -3,7 +3,7 @@
 <Context reloadable="true">
    	<Resource name="jdbc/student-manager" auth="Container"
    	    type="javax.sql.DataSource"
-   	    maxTotal="20" 
+   	    maxTotal="20"
    	    maxIdle="10"
 		maxWaitMillis="-1"
 		driverClassName="org.postgresql.Driver"

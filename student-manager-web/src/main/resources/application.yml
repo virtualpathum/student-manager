@@ -1,5 +1,5 @@
 ---
 server:
-  port: 8080
-  contextPath: /student-manager-web
+  port: 8070
+  contextPath: /student-web
 ---

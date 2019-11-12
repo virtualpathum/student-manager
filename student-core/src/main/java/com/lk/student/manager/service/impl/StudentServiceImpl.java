@@ -3,7 +3,6 @@
  */
 package com.lk.student.manager.service.impl;
 
-import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Named;

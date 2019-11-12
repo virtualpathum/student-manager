@@ -44,7 +44,7 @@ public class SysConfig {
 	public static final String PERSISTENCE_PROPERTIES = "persistence.properties";
 	
 	/** The Constant jndiNamespace. */
-	public static final String jndiNamespace = "java:comp/env/jdbc/student-manager";
+	public static final String jndiNamespace = "java:comp/env/jdbc/student";
 
 	
 
@@ -54,9 +54,9 @@ public class SysConfig {
 	    DriverManagerDataSource dataSource = new DriverManagerDataSource();
 	    dataSource.setDriverClassName("org.postgresql.Driver");
 
-	    dataSource.setUrl("jdbc:postgresql://localhost:5432/student-manager");
+	    dataSource.setUrl("jdbc:postgresql://student.c8d8t9ylweam.ap-southeast-1.rds.amazonaws.com:5455/student");
 	    dataSource.setUsername("postgres");
-	    dataSource.setPassword("abc123");
+	    dataSource.setPassword("post-gres");
 
 	    return dataSource;
 	}

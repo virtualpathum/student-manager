@@ -168,19 +168,19 @@
 			<version>2.0.0.Final</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.mysema.querydsl/querydsl-core -->
+		<!--&lt;!&ndash; https://mvnrepository.com/artifact/com.mysema.querydsl/querydsl-core &ndash;&gt;
 		<dependency>
 			<groupId>com.mysema.querydsl</groupId>
 			<artifactId>querydsl-core</artifactId>
 			<version>3.7.4</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.mysema.querydsl/querydsl-jpa -->
+		&lt;!&ndash; https://mvnrepository.com/artifact/com.mysema.querydsl/querydsl-jpa &ndash;&gt;
 		<dependency>
 			<groupId>com.mysema.querydsl</groupId>
 			<artifactId>querydsl-jpa</artifactId>
 			<version>3.7.4</version>
-		</dependency>
+		</dependency>-->
 		
 <!-- 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -218,14 +218,16 @@
 						</execution>
 					</executions>
 					<dependencies>
-						<dependency>
+						<!-- https://mvnrepository.com/artifact/com.mysema.querydsl/querydsl-apt -->
+						<!--<dependency>
 							<groupId>com.mysema.querydsl</groupId>
 							<artifactId>querydsl-apt</artifactId>
-							<version>3.4.3</version>
-						</dependency>
+							<version>3.7.4</version>
+						</dependency>-->
+
 					</dependencies>
 				</plugin>
-				<plugin>
+				<!--<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<configuration>
@@ -233,7 +235,7 @@
 							<processor>com.mysema.query.apt.hibernate.HibernateAnnotationProcessor</processor>
 						</annotationProcessors>
 					</configuration>
-				</plugin>
+				</plugin>-->
 			</plugins>
 		</pluginManagement>
         <plugins>

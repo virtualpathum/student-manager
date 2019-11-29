@@ -33,17 +33,17 @@ public class StudentEntity extends AbstractEntity{
 	private Long id;
 
 	/** The name. */
-	@NotEmpty
+	//@NotEmpty
 	@Column(name="student_name", nullable=false)
 	private String name;
 
 	/** The age. */
-	@NotNull
+	//@NotNull
 	@Column(name="student_age", nullable=false)
 	private Integer age;
 
 	/** The grade. */
-	@NotNull
+	//@NotNull
 	@Column(name="student_grade", nullable=false)
 	private String grade;
 

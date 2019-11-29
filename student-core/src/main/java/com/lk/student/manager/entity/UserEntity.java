@@ -14,22 +14,22 @@ public class UserEntity extends AbstractEntity {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty
+    //@NotEmpty
     @Column(name="user_name", nullable=false)
     private String userName;
 
-    @NotNull
+    //@NotNull
     @Column(name="password", nullable=false)
     private String password;
 
-    @NotNull
+    //@NotNull
     @Column(name="first_name", nullable=false)
     private String firstName;
 
     @Column(name="last_name")
     private String lastName;
 
-    @NotNull
+    //@NotNull
     @Column(name="email", nullable=false)
     private String email;
 

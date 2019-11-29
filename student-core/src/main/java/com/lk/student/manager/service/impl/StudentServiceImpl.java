@@ -15,6 +15,8 @@ import com.lk.student.manager.repo.StudentRepository;
 import com.lk.student.manager.resource.StudentResource;
 import com.lk.student.manager.service.StudentService;
 
+import java.util.Optional;
+
 // TODO: Auto-generated Javadoc
 /**
  * @author virtualpathum
@@ -60,6 +62,9 @@ public class StudentServiceImpl implements StudentService {
 	 */
 	private StudentResource createStudent(StudentResource resource) {
 		StudentEntity entity = mapper.asEntity(resource);
+        System.out.println("/// mapper : " + mapper);
+        System.out.println("/// repo : " + repo);
+        System.out.println("/// entity : " + entity);
 
 		return mapper.asResource(repo.saveAndFlush(entity));
 	}

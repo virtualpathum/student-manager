@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name="tbl_user")
@@ -32,6 +33,9 @@ public class UserEntity extends AbstractEntity {
     //@NotNull
     @Column(name="email", nullable=false)
     private String email;
+
+    @ManyToMany
+    private Set<RoleEntity> roles;
 
     public Long getId() {
         return id;
@@ -79,6 +83,14 @@ public class UserEntity extends AbstractEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Set<RoleEntity> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<RoleEntity> roles) {
+        this.roles = roles;
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.lk.student.manager.resource;
 
+import java.util.Set;
+
 public class UserResource extends AbstractResource<Long> {
 
 
@@ -12,6 +14,8 @@ public class UserResource extends AbstractResource<Long> {
     private String lastName;
 
     private String email;
+
+    private Set<RoleResource> roles;
 
     /**
      * Instantiates a new abstract resource.

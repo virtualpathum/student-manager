@@ -1,14 +1,12 @@
-
 package com.lk.student.manager.controller;
 
-import com.lk.student.manager.resource.UserResource;
-import com.lk.student.manager.service.UserService;
-import com.lk.student.manager.web.resource.finder.UserResourceFinder;
+import com.lk.student.manager.resource.BlogPostResource;
+import com.lk.student.manager.service.BlogPostService;
+import com.lk.student.manager.web.resource.finder.BlogPostResourceFinder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
@@ -17,15 +15,16 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
-public class UserController {
+public class BlogPostController {
+
     /** The Constant logger. */
-    public static final Logger logger = LoggerFactory.getLogger(UserController.class);
+    public static final Logger logger = LoggerFactory.getLogger(BlogPostController.class);
 
     /** The resource finder. */
-    private UserResourceFinder resourceFinder;
+    private BlogPostResourceFinder resourceFinder;
 
     /** The service. */
-    private UserService service;
+    private BlogPostService service;
 
     /**
      * Instantiates a new student controller.
@@ -34,7 +33,7 @@ public class UserController {
      * @param service the service
      */
     @Inject
-    public UserController(UserResourceFinder resourceFinder, UserService service) {
+    public BlogPostController(BlogPostResourceFinder resourceFinder, BlogPostService service) {
         this.resourceFinder = resourceFinder;
         this.service = service;
     }
@@ -45,20 +44,20 @@ public class UserController {
      * @return the list
      */
     @CrossOrigin(origins = "http://localhost:3000")
-    @RequestMapping(value = "/user/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/blog/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public List<UserResource> listAll() {
-        logger.info("Fetching Users");
+    public List<BlogPostResource> listAll() {
+        logger.info("Fetching Blog Posts");
         return resourceFinder.findAll();
     }
 
 
 
     @CrossOrigin(origins = "http://localhost:3000")
-    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/blog/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public UserResource get(@PathVariable("id") long id) {
-        logger.info("Fetching User with id {}", id);
+    public BlogPostResource get(@PathVariable("id") long id) {
+        logger.info("Fetching Blog Posts with id {}", id);
         return resourceFinder.findOne(id);
 
     }
@@ -70,10 +69,10 @@ public class UserController {
      * @return the student resource
      */
     @CrossOrigin(origins = "http://localhost:3000")
-    @RequestMapping(value = "/user/", method = RequestMethod.POST)
+    @RequestMapping(value = "/blog/", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public UserResource create(@RequestBody UserResource resource) {
-        logger.info("Creating User : {}", resource);
+    public BlogPostResource create(@RequestBody BlogPostResource resource) {
+        logger.info("Creating Blog Post : {}", resource);
         return service.saveOrUpdate(resource);
 
     }
@@ -86,10 +85,10 @@ public class UserController {
      * @return the student resource
      */
     @CrossOrigin(origins = "http://localhost:3000")
-    @RequestMapping(value = "/user/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/blog/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
-    public UserResource update(@PathVariable("id") long id, @RequestBody UserResource resource) {
-        logger.info("Updating User with id {}", id);
+    public BlogPostResource update(@PathVariable("id") long id, @RequestBody BlogPostResource resource) {
+        logger.info("Updating Blog Post with id {}", id);
         return service.saveOrUpdate(resource);
     }
 
@@ -99,11 +98,9 @@ public class UserController {
      * @param id the id
      */
     @CrossOrigin(origins = "http://localhost:3000")
-    @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/blog/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable("id") long id) {
-        logger.info("Fetching & Deleting User with id {}", id);
+        logger.info("Deleting Blog Posts with id {}", id);
         service.delete(id);
     }
-
 }
-
